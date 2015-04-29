@@ -14,8 +14,8 @@ do-configure-post-hook: shlibtool-override
 OVERRIDE_DIRDEPTH.libtool?=	${OVERRIDE_DIRDEPTH}
 OVERRIDE_DIRDEPTH.shlibtool?=	${OVERRIDE_DIRDEPTH}
 
-_OVERRIDE_PATH.libtool=		${_LIBTOOL}
-_OVERRIDE_PATH.shlibtool=	${_SHLIBTOOL}
+_OVERRIDE_PATH.libtool=		${LIBTOOL}
+_OVERRIDE_PATH.shlibtool=	${SHLIBTOOL}
 
 .for _script_ in libtool shlibtool
 _SCRIPT.${_script_}-override=						\

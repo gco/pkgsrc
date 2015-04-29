@@ -87,10 +87,6 @@ generate-cwrappers:
 .  endfor
 .endfor
 
-.if defined(USE_LIBTOOL)
-_LIBTOOL=		${WRAPPER_BINDIR}/libtool
-_SHLIBTOOL=		${WRAPPER_BINDIR}/shlibtool
-.endif
 PREPEND_PATH+=		${WRAPPER_BINDIR}
 
 _COOKIE.wrapper=	${WRKDIR}/.wrapper_done
