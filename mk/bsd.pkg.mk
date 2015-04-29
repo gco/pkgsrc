@@ -407,7 +407,7 @@ ${FAKEHOMEDIR}:
 	${RUN} ${MKDIR} ${.TARGET}
 
 # Use C-based wrappers or legacy shell versions.
-.if ${USE_CWRAPPERS:tl} != "no"
+.if defined(_USE_CWRAPPERS)
 .include "cwrappers.mk"
 .else
 .include "wrapper/bsd.wrapper.mk"

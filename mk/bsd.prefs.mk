@@ -799,6 +799,11 @@ PREPEND_PATH+=		${LOCALBASE}/bin
 INIT_SYSTEM?=		rc.d
 _BUILD_DEFS+=		INIT_SYSTEM
 
+# Enable cwrappers if requested unless we're building the wrappers themselves.
+.if ${USE_CWRAPPERS:tl} != "no" && empty(PKGPATH:Mpkgtools/cwrappers)
+_USE_CWRAPPERS=		# defined
+.endif
+
 # Wrapper framework definitions
 .include "wrapper/wrapper-defs.mk"
 

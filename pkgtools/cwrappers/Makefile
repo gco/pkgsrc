@@ -15,7 +15,6 @@ INSTALLATION_DIRS=	libexec/cwrappers
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_CWRAPPERS:=		no
 CHECK_PERMS=		no
 
 .if ${OPSYS} != "NetBSD" || !empty(MACHINE_PLATFORM:MNetBSD-[0-5].*)

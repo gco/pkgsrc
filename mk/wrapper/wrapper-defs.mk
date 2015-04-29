@@ -37,7 +37,7 @@
 .if !defined(WRAPPER_DEFS_MK)
 WRAPPER_DEFS_MK=	defined
 
-.if ${USE_CWRAPPERS:tl} != "no"
+.if defined(_USE_CWRAPPERS)
 WRAPPER_DIR=		${WRKDIR}/.cwrapper
 WRAPPER_BINDIR=		${WRAPPER_DIR}/bin
 .else
