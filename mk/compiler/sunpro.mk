@@ -16,7 +16,7 @@ COMPILER_SUNPRO_MK=	defined
 .include "../../mk/bsd.prefs.mk"
 
 SUNWSPROBASE?=		/opt/SUNWspro
-.if !exists($SUNWSPROBASE)
+.if !exists(${SUNWSPROBASE})
 SUNWSPROBASE!=         /bin/ls -d /opt/solstudio*
 .endif
 
